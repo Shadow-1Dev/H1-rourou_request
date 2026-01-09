@@ -12,8 +12,8 @@ main()
     self.health = 100;
     self.grenadeweapon = "fraggrenade";
     self.grenadeammo = 0;
-    self.secondaryweapon = "winchester1200";
-    self.sidearm = "usp_silencer";
+    self.secondaryweapon = "beretta";
+    self.sidearm = "beretta";
 
     if ( isai( self ) )
     {
@@ -21,13 +21,14 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_silencer";
-    if( level.script == "airplane" ){
+    self.weapon = "saw";
+    if( level.script == "icbm" || level.script == "launchfacility_a" || level.script == "launchfacility_b" || level.script == "jeepride" ){
         character\character_tf141_rnd::main();
     }
     else{
-        character\character_sas_ct_rnd::main();
+        character\character_mark_normal::main();
     }
+    
 }
 
 spawner()
@@ -38,9 +39,9 @@ spawner()
 precache()
 {
     character\character_tf141_rnd::precache();
-    character\character_sas_ct_rnd::precache();
-    precacheitem( "m4_silencer" );
-    precacheitem( "winchester1200" );
-    precacheitem( "usp_silencer" );
+    character\character_mark_normal::precache();
+    precacheitem( "saw" );
+    precacheitem( "beretta" );
+    precacheitem( "beretta" );
     precacheitem( "fraggrenade" );
 }

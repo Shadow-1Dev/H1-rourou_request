@@ -2,12 +2,12 @@
 main()
 {
 	self setModel("body_forest_tf141_assault_a");
-	self attach("head_tf141_forest_a", "", true);
+	self attach("head_sas_woodland_price", "", true);
 	self.voice = "british";
 }
 
 precache()
 {
 	precacheModel("body_forest_tf141_assault_a");
-	precacheModel("head_tf141_forest_a");
+	precacheModel("head_sas_woodland_price");
 }

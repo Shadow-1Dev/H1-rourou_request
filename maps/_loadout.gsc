@@ -25,13 +25,13 @@ give_loadout()
     maps\_loadout_code::loadout( "cargoship", "mp5_silencer", "m4_silencer", "fraggrenade", "flash_grenade", "viewhands_tf141", "british" ); //here
     maps\_loadout_code::loadout( "coup", undefined, undefined, undefined, undefined, undefined, "american" );
     maps\_loadout_code::loadout( "blackout", "m4m203_silencer_reflex", "mp5", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
-    maps\_loadout_code::loadout( "armada", "m4_grunt", "beretta", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
-    maps\_loadout_code::loadout( "bog_a", "m4_grenadier", "beretta", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
+    maps\_loadout_code::loadout( "armada", "m4_grunt", "beretta", "fraggrenade", "flash_grenade", "viewhands_delta", "american" );
+    maps\_loadout_code::loadout( "bog_a", "m4_grenadier", "beretta", "fraggrenade", "flash_grenade", "viewhands_delta", "american" );
     maps\_loadout_code::loadout( "hunted", undefined, "colt45", "fraggrenade", "flash_grenade", "viewhands_tf141", "british" );
     maps\_loadout_code::loadout( "ac130", undefined, undefined, undefined, undefined, "viewhands_tf141", "american" );
-    maps\_loadout_code::loadout( "bog_b", "m4_grenadier", "beretta", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
-    maps\_loadout_code::loadout( "airlift", "m4_grenadier", "colt45", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
-    maps\_loadout_code::loadout( "aftermath", undefined, undefined, undefined, undefined, "viewhands_tf141", "american" );
+    maps\_loadout_code::loadout( "bog_b", "m4_grenadier", "beretta", "fraggrenade", "flash_grenade", "viewhands_delta", "american" );
+    maps\_loadout_code::loadout( "airlift", "m4_grenadier", "colt45", "fraggrenade", "flash_grenade", "viewhands_delta", "american" );
+    maps\_loadout_code::loadout( "aftermath", undefined, undefined, undefined, undefined, "viewhands_delta", "american" );
     maps\_loadout_code::loadout( "village_assault", "m4m203_silencer_reflex", "m1014", "fraggrenade", "flash_grenade", "viewhands_tf141", "british" );
     maps\_loadout_code::loadout( "scoutsniper", "m14_scoped_silencer", "usp_silencer", "fraggrenade", undefined, "viewhands_tf141", "british" );
     maps\_loadout_code::loadout( "sniperescape", "m14_scoped_woodland", "usp_silencer", "fraggrenade", "flash_grenade", "viewhands_tf141", "british" );

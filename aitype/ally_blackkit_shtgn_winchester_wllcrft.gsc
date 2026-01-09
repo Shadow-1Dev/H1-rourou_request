@@ -9,11 +9,11 @@ main()
     self.type = "human";
     self.subclass = "regular";
     self.accuracy = 0.2;
-    self.health = 100;
+    self.health = 150;
     self.grenadeweapon = "fraggrenade";
     self.grenadeammo = 0;
-    self.secondaryweapon = "winchester1200";
-    self.sidearm = "usp_silencer";
+    self.secondaryweapon = "usp";
+    self.sidearm = "usp";
 
     if ( isai( self ) )
     {
@@ -21,13 +21,14 @@ main()
         self setengagementmaxdist( 768.0, 1024.0 );
     }
 
-    self.weapon = "m4_silencer";
+    self.weapon = "winchester1200";
     if( level.script == "airplane" ){
         character\character_tf141_rnd::main();
     }
     else{
         character\character_sas_ct_rnd::main();
     }
+    
 }
 
 spawner()
@@ -39,8 +40,8 @@ precache()
 {
     character\character_tf141_rnd::precache();
     character\character_sas_ct_rnd::precache();
-    precacheitem( "m4_silencer" );
     precacheitem( "winchester1200" );
-    precacheitem( "usp_silencer" );
+    precacheitem( "usp" );
+    precacheitem( "usp" );
     precacheitem( "fraggrenade" );
 }
