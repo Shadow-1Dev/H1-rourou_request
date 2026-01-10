@@ -208,8 +208,8 @@ custom_deadbody( var_0 )
 {
     if ( level.script == "aftermath" && self.custom_deadbody.body == "body_sp_cobra_pilot_desert_velinda_burned" ) 
     {
-        character\character_shadow_co_rnd::precache(); //here
-        var_0 character\character_shadow_co_rnd::main(); //here
+        character\character_sas_ct_rnd::precache(); //here
+        var_0 character\character_sas_ct_rnd::main(); //here
         return;
     }
 

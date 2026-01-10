@@ -5,10 +5,10 @@
 
 anim_main()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_player_delta" ); //here
-    level.scr_model["player_viewhands"] = "viewhands_player_delta"; //here
-    level.scr_model["view_body"] = "vb_generic_s1"; //here
-    level.scr_model["player_rig"] = "vb_generic_s1"; //here
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     maps\_anim::addnotetrack_customfunction( "generic", "fire", maps\armada::kill_during_breach, "detcord_stack_leftbreach_02" );
     anim_blackhawk();
     level.scr_anim["generic"]["jog"] = %combat_jog;
@@ -123,19 +123,19 @@ animated_model_setup()
 
 anim_blackhawk()
 {
-    level.scr_model["player_viewhands"] = "viewhands_player_delta"; //here
-    level.scr_model["view_body"] = "vb_generic_s1"; //here
-    level.scr_model["player_rig"] = "vb_generic_s1"; //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     level.scr_animtree["blackhawk"] = #animtree;
     level.scr_anim["blackhawk"]["interiorwires"][0] = %h1_blackhawk_interiorwires;
 }
 
 player_heli_ropeanimoverride()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_player_delta" ); //here
-    level.scr_model["player_viewhands"] = "viewhands_player_delta"; //here
-    level.scr_model["view_body"] = "vb_generic_s1"; //here
-    level.scr_model["player_rig"] = "vb_generic_s1"; //here
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     var_0 = "TAG_FastRope_RI";
     var_1 = "rope_test_ri";
     var_2 = %armada_blackhawk_sniper_idle_fastrope80;
@@ -161,8 +161,8 @@ player_heli_ropeanimoverride()
 player_heli_ropeanimoverride_idle( var_0, var_1, var_2 )
 {
     level.scr_model["player_viewhands"] = "viewhands_player_tf141"; //here
-    level.scr_model["view_body"] = "vb_generic_s1"; //here
-    level.scr_model["player_rig"] = "vb_generic_s1"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     self endon( "unloading" );
 
     for (;;)

@@ -233,7 +233,7 @@ anim_view_body()
     // level.scr_model["playerview"] = "viewbody_tf141_forest"; //here
     level.scr_model["player_body"] = "viewbody_tf141_forest"; //here
     level.scr_model["view_body"] = "viewbody_tf141_forest";
-    // precachemodel( "vb_generic_s1" );
+    // precachemodel( "vb_generic_s1_" );
     precachemodel( "viewbody_tf141_forest" ); // HERE
     precachemodel( "viewhands_player_tf141" ); // HERE
     

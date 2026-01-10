@@ -16,7 +16,7 @@ dead_script()
 
 main()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_player_delta" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
     if ( getdvar( "beautiful_corner" ) == "1" )
     {
         dead_script();
@@ -42,7 +42,7 @@ main()
     maps\_utility::add_start( "tv", ::tv_start, &"STARTS_TV" );
     maps\_utility::add_start( "tank", ::tank_start, &"STARTS_TANK" );
     maps\_utility::add_start( "end", ::end_start, &"STARTS_END" );
-    precachemodel( "vb_generic_s1" );
+    precachemodel( "vb_generic_s1_" );
     precachemodel( "vehicle_blackhawk_hero_sas_night_interior" );
     precachemodel( "h1_mwr_com_widescreen_monitor_des" );
     precachemodel( "h1_mwr_com_widescreen_monitor_2_des" );
@@ -496,7 +496,7 @@ ride_in_sniper_think()
 
 immortal_rope_guy()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_player_delta" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
     thread maps\_utility::magic_bullet_shield();
     common_scripts\utility::flag_wait( "on_ground" );
     thread maps\_utility::stop_magic_bullet_shield();

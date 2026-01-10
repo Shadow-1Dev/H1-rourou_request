@@ -89,8 +89,8 @@ main()
     level.weaponclipmodels[2] = "weapon_ak47_clip";
     level.weaponclipmodels[3] = "weapon_ak74u_clip";
     level.maskcracksfx = undefined;
-    precachemodel( "iw5_body_black_flightsuit" );
-    precachemodel( "head_shadow_co_c" );
+    // precachemodel( "iw5_body_black_flightsuit" );
+    // precachemodel( "head_shadow_co_c" );
     maps\cargoship_precache::main();
     maps\cargoship_fx::main();
     maps\createfx\cargoship_audio::main();
@@ -4695,7 +4695,7 @@ misc_precacheinit()
     precacherumble( "tank_rumble" );
     precacherumble( "damage_heavy" );
     precachemodel( "head_sas_ct_assault_price_mask_up_wrinkle" );
-    precachemodel( "head_sas_ct_assault_price_mask_down_nobeard" );
+    // precachemodel( "head_sas_ct_assault_price_mask_down_nobeard" );
     precachemodel( "head_spetsnaz_assault_vlad" );
     precachemodel( "head_spetsnaz_assault_geoff" );
     precachemodel( "com_computer_monitor_d" );

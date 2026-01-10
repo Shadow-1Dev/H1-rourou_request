@@ -72,12 +72,12 @@ deadbody__anims()
 
 player_body_sense()
 {
-    precachemodel( "vb_generic_s1" );
+    precachemodel( "vb_generic_s1_" );
     level.scr_anim["player_body"]["jackson_wakeup"] = %h1_aftermath_jackson_wakeup;
     level.scr_anim["player_body"]["jackson_helicopterfall"] = %h1_aftermath_jackson_helicopterfall;
     level.scr_anim["player_body"]["jackson_fall"] = %h1_aftermath_jackson_fall;
     level.scr_anim["player_body"]["jackson_death"] = %h1_aftermath_jackson_death;
-    level.scr_model["player_body"] = "vb_generic_s1"; //here
+    level.scr_model["player_body"] = "vb_generic_s1_"; //here
     level.scr_animtree["player_body"] = #animtree;
     maps\_anim::addnotetrack_animsound( "player_body", "jackson_death", "body_hit_ground", "bodyfall_gravel_large" );
 }

@@ -43,7 +43,7 @@ main()
     precachemodel( "com_flashlight_on" );
     precachemodel( "h1_prop_dogtag" );
     precachemodel( "vehicle_blackhawk_hero_interior" );
-    character\character_sp_pilot_zack_woodland::precache();
+    character\character_sas_ct_rnd::precache();
     precacheitem( "hunted_crash_missile_hunted" );
     precacherumble( "tank_rumble" );
     precacherumble( "generic_attack_medium_500" );
@@ -5014,7 +5014,7 @@ spawn_dead_body()
     var_1.animname = "dead_guy";
     var_1 maps\_utility::assign_animtree();
     var_1 disablerootmotion();
-    var_1 character\character_shadow_co_rnd::main();
+    var_1 character\character_sas_ct_rnd::main();
 
     if ( !isdefined( self.script_trace ) )
     {

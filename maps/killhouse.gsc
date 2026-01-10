@@ -449,10 +449,10 @@ main()
     maps\killhouse_code::melontargetdummies();
     precachemodel( "head_sp_sas_woodland_colon" );
     precachemodel( "head_sp_sas_woodland_golden" );
-    precachemodel( "head_sas_ct_assault_charles" );
-    precachemodel( "head_sas_ct_assault_mitchel" );
-    precachemodel( "head_sas_ct_assault_william" );
-    precachemodel( "head_sas_ct_assault_charles_nomask" );
+    precachemodel( "head_sas_ct_assault_charles_" );
+    precachemodel( "head_sas_ct_assault_mitchel_" );
+    precachemodel( "head_sas_ct_assault_william_" );
+    precachemodel( "head_sas_ct_assault_charles__nomask" );
 }
 
 gazintrolightstaging()
@@ -2731,7 +2731,7 @@ report_to_price()
     var_1.animname = "sas1";
     var_2.animname = "sas2";
     var_3.animname = "sas3";
-    // var_1 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_mitchel" );
+    // var_1 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_mitchel_" );
     level.mocaporiginhangar3 = getent( "mocapRevealPos", "targetname" );
     level.mocaporiginhangar3 thread maps\_anim::anim_loop_solo( level.price, "h1_price_before_reveal_idle", undefined, "stop_before_reveal" );
     level.mocaporiginhangar3 thread maps\_anim::anim_loop_solo( var_1, "h1_sas1_before_reveal_idle", undefined, "stop_before_reveal" );
@@ -4278,7 +4278,7 @@ sittingtalkingguy_think( var_0 )
     var_2 setgoalnode( var_3 );
     var_5 = getent( "SittingGuyPos", "targetname" );
     var_6 = var_0;
-    // var_6 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_charles_nomask" );
+    // var_6 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_charles__nomask" );
     var_6 maps\_utility::gun_remove();
     var_6.grenadeawareness = 0;
     var_6.animname = "generic";

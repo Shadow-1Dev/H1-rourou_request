@@ -338,22 +338,22 @@ randomizeguardcharacter()
     switch ( randomint( 6 ) )
     {
         case 0:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
         case 1:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
         case 2:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
         case 3:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
         case 4:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
         case 5:
-            character\character_shadow_co_rnd::main();
+            character\character_sas_ct_rnd::main();
             break;
     }
 }
@@ -377,7 +377,7 @@ setcurbstompcharacter()
     }
 
     //character\character_sp_arab_regular_yasir::main();
-    character\character_shadow_co_rnd::main();
+    character\character_sas_ct_rnd::main();
 }
 
 lerpshadowdetail( var_0, var_1 )

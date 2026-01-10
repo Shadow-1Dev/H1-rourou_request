@@ -103,10 +103,10 @@ main()
 setup_dead_bodies()
 {
     level.dead_bodies_ignore_ragdoll_settings = 1;
-    level.scr_deadbody[1] = character\character_shadow_co_rnd::main;
-    level.scr_deadbody[2] = character\character_shadow_co_rnd::main;
-    level.scr_deadbody[3] = character\character_shadow_co_rnd::main;
-    level.scr_deadbody[4] = character\character_shadow_co_rnd::main;
+    level.scr_deadbody[1] = character\character_sas_ct_rnd::main;
+    level.scr_deadbody[2] = character\character_sas_ct_rnd::main;
+    level.scr_deadbody[3] = character\character_sas_ct_rnd::main;
+    level.scr_deadbody[4] = character\character_sas_ct_rnd::main;
     maps\_deadbody::main();
 }
 

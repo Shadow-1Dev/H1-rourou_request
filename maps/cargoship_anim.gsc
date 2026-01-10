@@ -329,7 +329,8 @@ anim_player()
     level.scr_model["fastrope_intro"] = "viewbody_tf141_forest"; //here
     level.scr_anim["fastrope_intro"]["opening"] = %h1_cargoship_opening_player;
     level.scr_anim["fastrope_intro"]["loop"][0] = %h1_cargoship_opening_player;
-    level.scr_gun["fastrope_intro"] = "viewmodel_m4_silencer";
+    // level.scr_gun["fastrope_intro"] = "viewmodel_m4_silencer";
+    level.scr_gun["fastrope_intro"] = "mp5_silencer";
     level.scr_animtree["player_viewbody"] = #animtree;
     level.scr_model["player_viewbody"] = "viewbody_tf141_forest"; //here
     level.scr_anim["player_viewbody"]["player_explosion"] = %cargoship_explosion_player;

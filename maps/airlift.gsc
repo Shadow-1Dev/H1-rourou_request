@@ -2182,7 +2182,7 @@ cobra_streetfight()
     level.vasquez = maps\jake_tools::getdudefromarray( level.afriendliesseaknight, "vasquez" );
     level.crewchief = maps\jake_tools::spawndude( getent( "seaknight_crewchief_cobrastreets", "targetname" ), 1 );
     //level.crewchief character\character_shadow_co_rnd::main(); //here
-    level.crewchief character\character_shadow_co_pilot::main(); //here
+    level.crewchief character\character_sas_ct_rnd::main(); //here
     level.seaknight thread vehicle_seaknight_unload( level.afriendliesseaknight, level.crewchief, "cobrastreets" );
     level.seaknight waittill( "landed" );
     soundscripts\_snd::snd_message( "start_pilot_rescue_mix" );
@@ -4385,9 +4385,9 @@ getdamagetype( var_0 )
 
 initprecache()
 {
-    precachemodel( "vb_generic_s1" ); //here
-    precachemodel( "viewhands_player_delta" ); //here
-    precachemodel( "viewhands_delta" ); //here
+    precachemodel( "vb_generic_s1_" ); //here
+    precachemodel( "viewhands_player_delta_" ); //here
+    precachemodel( "viewhands_delta_" ); //here
     precachemodel( "projectile_cbu97_clusterbomb" );
     precacheshader( "black" );
     precacheitem( "cobra_ffar_airlift_map_overwrite" );
