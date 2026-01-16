@@ -160,7 +160,7 @@ player_heli_ropeanimoverride()
 
 player_heli_ropeanimoverride_idle( var_0, var_1, var_2 )
 {
-    level.scr_model["player_viewhands"] = "viewhands_player_tf141"; //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
     level.scr_model["view_body"] = "vb_generic_s1_"; //here
     level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     self endon( "unloading" );

@@ -16,6 +16,8 @@ dead_script()
 
 main()
 {
+    var_2 setmodel( "vb_generic_s1_" ); // Here
+    // var_2 setmodel( "worldbody_h1_usmc_desert" ); // Here
     maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
     if ( getdvar( "beautiful_corner" ) == "1" )
     {
@@ -42,7 +44,7 @@ main()
     maps\_utility::add_start( "tv", ::tv_start, &"STARTS_TV" );
     maps\_utility::add_start( "tank", ::tank_start, &"STARTS_TANK" );
     maps\_utility::add_start( "end", ::end_start, &"STARTS_END" );
-    precachemodel( "vb_generic_s1_" );
+    precachemodel( "worldbody_h1_usmc_desert" );
     precachemodel( "vehicle_blackhawk_hero_sas_night_interior" );
     precachemodel( "h1_mwr_com_widescreen_monitor_des" );
     precachemodel( "h1_mwr_com_widescreen_monitor_2_des" );
@@ -946,7 +948,7 @@ loadplayer( var_0, var_1 )
     var_4 = maps\_vehicle_aianim::anim_pos( self, var_0 );
     var_2 notify( "newanim" );
     var_2 detachall();
-    var_2 setmodel( "worldbody_h1_usmc_desert" );
+    var_2 setmodel( "vb_generic_s1_" ); // Here
     var_2 useanimtree( #animtree );
     var_2.get_out_override = %h1_armada_blackhawk_player_drop;
     var_2.vehicle_idle_override = %h1_armada_blackhawk_player_idle_loop;

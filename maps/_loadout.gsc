@@ -91,8 +91,10 @@ give_loadout()
     // precachemodel( "body_sas_ct_assault_william" );
     // precachemodel( "head_sas_ct_assault_william" );
 
-    precachemodel( "vb_generic_s1" );
-    precachemodel( "viewhands_player_delta" );
-    precachemodel( "viewhands_delta" );
+    precachemodel( "vb_generic_s1_" );
+    precachemodel( "viewhands_player_delta_" );
+    precachemodel( "viewhands_delta_" );
+
+    precachemodel( "worldbody_h1_usmc_desert" );
 
 }
