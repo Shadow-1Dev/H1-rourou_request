@@ -118,7 +118,7 @@ main()
     level.gaz maps\_utility::make_hero();
     level.gaz.animname = "gaz";
     level.redshirt = getent( "redshirt1", "targetname" );
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\_utility::battlechatter_off( "allies" );
     maps\_utility::battlechatter_off( "axis" );
     setdvar( "village_defend_one_minute", "0" );

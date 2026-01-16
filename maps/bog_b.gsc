@@ -92,7 +92,7 @@ main()
     maps\bog_b_aud::main();
     maps\_compass::setupminimap( "compass_map_bog_b" );
     thread maps\bog_b_amb::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     thread maps\_mortar::bog_style_mortar();
     thread teamssplitup();
     thread lastsequence();

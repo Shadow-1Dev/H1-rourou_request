@@ -58,4 +58,41 @@ give_loadout()
     precachemodel( "viewhands_player_tf141" );
     precachemodel( "viewbody_tf141_forest" );
 
+    precachemodel( "body_forest_tf141_assault_a" );
+
+    // precachemodel( "body_tf141_assault_a" );
+    // precachemodel( "head_tf141_forest_a" );
+    // precachemodel( "head_tf141_forest_b" );
+    // precachemodel( "head_tf141_forest_c" );
+    // precachemodel( "head_tf141_forest_d" );
+    // precachemodel( "head_tf141_scarecrow" );
+
+    // precachemodel( "body_forest_tf141_ghost" );
+    // precachemodel( "head_hero_ghost_forest" );
+
+    // precachemodel( "head_sas_woodland_price" );
+    // precachemodel( "head_sas_woodland_gaz" );
+
+    // precachemodel( "body_force_mark_woodland" );
+    // precachemodel( "head_force_assault_mark" );
+
+    // precachemodel( "body_sas_ct_assault_benjamin" );
+    // precachemodel( "head_sas_ct_assault_benjamin" );
+
+    // precachemodel( "body_sas_ct_assault_charles" );
+    // precachemodel( "head_sas_ct_assault_charles" );
+
+    // precachemodel( "body_sas_ct_assault_mitchel" );
+    // precachemodel( "head_sas_ct_assault_mitchel" );
+
+    // precachemodel( "body_sas_ct_assault_neal" );
+    // precachemodel( "head_sas_ct_assault_neal" );
+
+    // precachemodel( "body_sas_ct_assault_william" );
+    // precachemodel( "head_sas_ct_assault_william" );
+
+    precachemodel( "vb_generic_s1" );
+    precachemodel( "viewhands_player_delta" );
+    precachemodel( "viewhands_delta" );
+
 }

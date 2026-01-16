@@ -97,7 +97,7 @@ main()
     setup_bm21_deathanim();
     maps\icbm_fx::main();
     maps\createfx\icbm_audio::main();
-    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
     animscripts\dog\dog_init::initdoganimations();
     level.weaponclipmodels = [];
     level.weaponclipmodels[0] = "weapon_ak47_clip";
@@ -140,7 +140,7 @@ main()
     createthreatbiasgroup( "dogs" );
     createthreatbiasgroup( "icbm_friendlies" );
     level.player thread maps\_stealth_logic::stealth_ai();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     setignoremegroup( "icbm_friendlies", "dogs" );
     setignoremegroup( "dogs", "icbm_friendlies" );
     common_scripts\utility::flag_init( "first_obj" );

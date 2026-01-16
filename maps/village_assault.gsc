@@ -36,7 +36,7 @@ main()
     maps\_load::main();
     maps\_hiding_door::init_hiding_door();
     maps\_nightvision::main();
-    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
     maps\_javelin::init();
     maps\_drone_ai::init();
     animscripts\dog\dog_init::initdoganimations();
@@ -44,7 +44,7 @@ main()
     maps\village_assault_lighting::main();
     maps\village_assault_aud::main();
     thread maps\village_assault_code::scriptcalls();
-    thread maps\village_assault_code::// monitor_price_name(); // HERE // here // Shadow Company
+    //thread monitor_price_name(); // HERE // here // Shadow Company
     maps\_utility::add_hint_string( "armor_damage", &"SCRIPT_ARMOR_DAMAGE", undefined );
     thread maps\village_assault_code::add_objective_building( "1" );
     thread maps\village_assault_code::add_objective_building( "2" );

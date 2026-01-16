@@ -22,7 +22,12 @@ main()
     }
 
     self.weapon = "g36c";
-    character\character_tf141_gaz::main();
+    if ( level.script == "killhouse" || level.script == "cargoship" ){
+        character\character_ct_gaz::main();
+    }
+    else{
+        character\character_tf141_gaz::main();
+    }
 }
 
 spawner()
@@ -32,6 +37,7 @@ spawner()
 
 precache()
 {
+    character\character_ct_gaz::precache();
     character\character_tf141_gaz::precache();
     precacheitem( "g36c" );
     precacheitem( "usp_silencer" );

@@ -102,7 +102,7 @@ blast_door()
 player_anims()
 {
     level.scr_animtree["player"] = #animtree;
-    level.scr_model["player"] = "viewhands_shadow_co"; //here
+    level.scr_model["player"] = "viewhands_tf141"; //here
     level.scr_anim["player"]["typing_abort_codes"] = %h1_launchfacility_b_player_typing;
 }
 

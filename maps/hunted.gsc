@@ -57,7 +57,7 @@ main()
     maps\_utility::default_start( ::start_default );
     maps\hunted_precache::main();
     maps\_vehicle::build_aianims_with_classname( "script_vehicle_blackhawk_hero", ::blackhawk_overrides, vehicle_scripts\_blackhawk::set_vehicle_anims );
-    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" );  //here
+    maps\_load::set_player_viewhand_model( "viewhands_tf141" );  //here
     animscripts\dog\dog_init::initdoganimations();
     setsaveddvar( "r_reactiveMotionWindAmplitudeScale", 3 );
     setsaveddvar( "r_reactiveMotionWindStrength", 1 );

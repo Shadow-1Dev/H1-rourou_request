@@ -110,7 +110,7 @@ main()
     maps\bog_a_backhalf::bog_backhalf_init();
     maps\bog_a_lighting::main();
     maps\bog_a_aud::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\_helicopter_globals::init_helicopters();
     thread maps\bog_a_code::debug_player_damage();
     maps\_utility::battlechatter_off( "allies" );

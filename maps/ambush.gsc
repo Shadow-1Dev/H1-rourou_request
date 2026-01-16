@@ -88,7 +88,7 @@ main()
     level.weaponclipmodels[5] = "weapon_g36_clip";
     level.weaponclipmodels[6] = "weapon_saw_clip";
     level.weaponclipmodels[7] = "weapon_g3_clip";
-    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
     setup_flags();
     maps\ambush_fx::main();
     maps\_load::main();
@@ -99,7 +99,7 @@ main()
     maps\ambush_aud::main();
     maps\createart\ambush_art::main();
     animscripts\dog\dog_init::initdoganimations();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     level.vehicle_aianimthread["hide_attack_left"] = ::guy_hide_attack_left;
     level.vehicle_aianimcheck["hide_attack_left"] = ::guy_hide_attack_left_check;
     level.vehicle_aianimthread["escape"] = ::guy_escape;
@@ -1198,7 +1198,7 @@ ambush_setup()
         level.player switchtoweapon( "rpd" );
     }
 
-    level.player setviewmodel( "viewhands_shadow_co" ); //here
+    level.player setviewmodel( "viewhands_tf141" ); //here
     level.player disableweapons();
     delete_dropped_weapons();
     clearallcorpses();

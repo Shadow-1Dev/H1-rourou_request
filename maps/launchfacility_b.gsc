@@ -68,7 +68,7 @@ main()
     maps\launchfacility_b_anim::main();
     maps\launchfacility_b_lighting::main();
     maps\launchfacility_b_aud::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\_deadbody::main();
     maps\_compass::setupminimap( "compass_map_launchfacility_b" );
     createthreatbiasgroup( "player" );

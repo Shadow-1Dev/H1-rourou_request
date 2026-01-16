@@ -115,7 +115,7 @@ main()
     maps\_javelin::init();
     maps\_compass::setupminimap( "compass_map_launchfacility_a" );
     level thread maps\launchfacility_a_amb::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     common_scripts\utility::flag_init( "aa_first_bmp_section" );
     common_scripts\utility::flag_init( "aa_container_to_gate_section" );
     common_scripts\utility::flag_init( "aa_tarmac_bmp01_section" );

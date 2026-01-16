@@ -108,7 +108,7 @@ main()
     var_0 = getaiarray( "allies" );
     common_scripts\utility::array_thread( var_0, maps\_stealth_logic::friendly_init );
     maps\_utility::add_global_spawn_function( "allies", maps\_stealth_logic::friendly_init );
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\_nightvision::main();
     level thread maps\blackout_amb::main();
     maps\blackout_anim::main();

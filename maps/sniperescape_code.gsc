@@ -5291,7 +5291,7 @@ sniper_escape_initial_secondary_weapon_loadout()
     level.player giveweapon( "fraggrenade" );
     level.player giveweapon( "flash_grenade" );
     level.player enableoffhandweapons();
-    level.player setviewmodel( "viewhands_shadow_co" );
+    level.player setviewmodel( "viewhands_tf141" );
 }
 
 set_legit_weapons_for_sniper_escape()

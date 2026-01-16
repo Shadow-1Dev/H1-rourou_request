@@ -32,8 +32,8 @@ main()
         return;
     }
 
-    //maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
-    //level.player setviewmodel( "viewhands_shadow_co" ); //here
+    //maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
+    //level.player setviewmodel( "viewhands_tf141" ); //here
 
     setsaveddvar( "sm_sunSampleSizeNear", 1 );
     setsaveddvar( "sm_sunShadowScale", 0.5 );

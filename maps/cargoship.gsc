@@ -89,8 +89,8 @@ main()
     level.weaponclipmodels[2] = "weapon_ak47_clip";
     level.weaponclipmodels[3] = "weapon_ak74u_clip";
     level.maskcracksfx = undefined;
-    // precachemodel( "iw5_body_black_flightsuit" );
-    // precachemodel( "head_shadow_co_c" );
+    precachemodel( "iw5_body_black_flightsuit" );
+    precachemodel( "head_shadow_co_c" );
     maps\cargoship_precache::main();
     maps\cargoship_fx::main();
     maps\createfx\cargoship_audio::main();
@@ -134,7 +134,7 @@ main()
     misc_setup();
     maps\_hud_util::create_mantle();
     thread initial_setup();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread monitor_price_name(); // HERE // Shadow Company // here
     thread objective_main();
     thread maps\cargoship_code::jumptothink();
     thread maps\cargoship_code::deck_light_shadow_hack();
@@ -4695,7 +4695,7 @@ misc_precacheinit()
     precacherumble( "tank_rumble" );
     precacherumble( "damage_heavy" );
     precachemodel( "head_sas_ct_assault_price_mask_up_wrinkle" );
-    // precachemodel( "head_sas_ct_assault_price_mask_down_nobeard" );
+    precachemodel( "head_sas_ct_assault_price_mask_down_nobeard" );
     precachemodel( "head_spetsnaz_assault_vlad" );
     precachemodel( "head_spetsnaz_assault_geoff" );
     precachemodel( "com_computer_monitor_d" );
@@ -5197,7 +5197,7 @@ disable_ik_trigger()
 // ME // HERE // Shadow Company
 monitor_price_name()
 {
-    level endon( "mission failed" );
+    // level endon( "mission failed" );
     
     // for(;;)
     // {
@@ -5207,11 +5207,11 @@ monitor_price_name()
         
     //     wait 0.5;
     // }
-    for(;;)
-    {
-        level.heroes3["price"].name = "General Shepherd";
-       level.heroes3["grigsby"].name = "Sgt. Foley";
+    // for(;;)
+    // {
+    //     level.heroes3["price"].name = "General Shepherd";
+    //    level.heroes3["grigsby"].name = "Sgt. Foley";
         
-        wait 0.5;
-    }
+    //     wait 0.5;
+    // }
 }

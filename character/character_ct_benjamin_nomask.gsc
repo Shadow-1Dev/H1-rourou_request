@@ -2,12 +2,12 @@
 main()
 {
 	self setModel("body_sas_ct_assault_benjamin_");
-	self attach("head_sas_ct_assault_benjamin_nomask", "", true);
+	self attach("head_sas_ct_assault_benjamin_nomask_", "", true);
 	self.voice = "british";
 }
 
 precache()
 {
 	precacheModel("body_sas_ct_assault_benjamin_");
-	precacheModel("head_sas_ct_assault_benjamin_nomask");
+	precacheModel("head_sas_ct_assault_benjamin_nomask_");
 }

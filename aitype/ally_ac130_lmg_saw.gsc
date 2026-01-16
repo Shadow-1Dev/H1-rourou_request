@@ -9,11 +9,11 @@ main()
     self.type = "human";
     self.subclass = "regular";
     self.accuracy = 0.2;
-    self.health = 100;
+    self.health = 150;
     self.grenadeweapon = "fraggrenade";
     self.grenadeammo = 0;
-    self.secondaryweapon = "usp_silencer";
-    self.sidearm = "usp_silencer";
+    self.secondaryweapon = "usp";
+    self.sidearm = "usp";
 
     if ( isai( self ) )
     {
@@ -22,11 +22,11 @@ main()
     }
 
     self.weapon = "saw";
-    if( level.script == "icbm" || level.script == "launchfacility_a" || level.script == "launchfacility_b" || level.script == "jeepride" ){
-        character\character_tf141_rnd::main();
+    if ( level.script == "killhouse" || level.script == "cargoship"){
+        character\character_sas_ct_rnd::main();
     }
     else{
-        character\character_tf141_griggs::main();
+        character\character_tf141_rnd::main();
     }
     
 }
@@ -39,9 +39,9 @@ spawner()
 precache()
 {
     character\character_tf141_rnd::precache();
-    character\character_tf141_griggs::precache();
+    character\character_sas_ct_rnd::precache();
     precacheitem( "saw" );
-    precacheitem( "usp_silencer" );
-    precacheitem( "usp_silencer" );
+    precacheitem( "usp" );
+    precacheitem( "usp" );
     precacheitem( "fraggrenade" );
 }

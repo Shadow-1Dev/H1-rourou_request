@@ -154,7 +154,7 @@ main()
     maps\scoutsniper_anim::main();
     maps\scoutsniper_lighting::main();
     maps\scoutsniper_aud::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\_stealth_logic::stealth_init();
     maps\_stealth_behavior::main();
     maps\_load::set_player_viewhand_model( "viewhands_player_tf141" );

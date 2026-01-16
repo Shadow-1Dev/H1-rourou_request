@@ -3,7 +3,7 @@
 
 main()
 {
-    //level.player setviewmodel( "viewhands_shadow_co" );                   //here
+    //level.player setviewmodel( "viewhands_tf141" );                   //here
     //maps\_load::set_player_viewhand_model( "viewhands_player_tf141" ); //here
     anims();
     dialogue();

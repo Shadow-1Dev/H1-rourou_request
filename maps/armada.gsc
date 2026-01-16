@@ -101,7 +101,7 @@ main()
     maps\armada_aud::main();
     maps\_compass::setupminimap( "compass_map_armada" );
     thread maps\armada_amb::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     level.mortar_min_dist = 500;
     level thread maps\_mortar::bog_style_mortar();
     level.nomaxmortardist = 1;

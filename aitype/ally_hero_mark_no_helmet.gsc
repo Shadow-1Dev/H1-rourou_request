@@ -26,7 +26,7 @@ main()
         character\character_tf141_rnd::main();
     }
     else{
-        character\character_mark_normal::main();
+        character\character_tf141_griggs::main();
     }
     
 }
@@ -39,7 +39,7 @@ spawner()
 precache()
 {
     character\character_tf141_rnd::precache();
-    character\character_mark_normal::precache();
+    character\character_tf141_griggs::precache();
     precacheitem( "saw" );
     precacheitem( "beretta" );
     precacheitem( "beretta" );

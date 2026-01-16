@@ -3,7 +3,7 @@
 
 main()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_shadow_co" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
     setup_exploder_anims();
     exploder_script_model_anims();
     animated_model_setup();
@@ -151,7 +151,7 @@ script_models_minigun_player()
 {
     level.scr_anim["minigun_player"]["use_minigun"] = %h1_minigun_in_player;
     level.scr_animtree["minigun_player"] = #animtree;
-    level.scr_model["minigun_player"] = "viewhands_shadow_co"; //here
+    level.scr_model["minigun_player"] = "viewhands_tf141"; //here
     level.scr_anim["detonator_guy"]["press_detonator"] = %h1_village_defend_sas_press_detonator;
     maps\_anim::addnotetrack_customfunction( "detonator_guy", "radio_dialog", maps\village_defend::say_kaboom, "press_detonator" );
     maps\_anim::addnotetrack_customfunction( "detonator_guy", "kaboom", maps\village_defend::do_kaboom, "press_detonator" );

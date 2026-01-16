@@ -176,7 +176,7 @@ anims()
 player_anims()
 {
     precachemodel( "viewbody_tf141_forest" ); //here
-    precachemodel( "viewhands_shadow_co" ); //here
+    precachemodel( "viewhands_tf141" ); //here
     precachemodel( "viewhands_player_tf141" ); //here
 
     level.scr_animtree["player_rig"] = #animtree;

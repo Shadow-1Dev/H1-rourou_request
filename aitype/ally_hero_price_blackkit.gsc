@@ -22,8 +22,14 @@ main()
     }
 
     self.weapon = "m4_silencer";
-    character\character_tf141_price::main();
+    if ( level.script == "killhouse" || level.script == "cargoship" ){
+        character\character_ct_price::main();
+    }
+    else{
+        character\character_tf141_price::main();
+    }
 }
+    
 
 spawner()
 {
@@ -32,6 +38,7 @@ spawner()
 
 precache()
 {
+    character\character_ct_price::precache();
     character\character_tf141_price::precache();
     precacheitem( "m4_silencer" );
     precacheitem( "usp_silencer" );

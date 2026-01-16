@@ -278,7 +278,7 @@ compass_reminder()
 move_gaz_once_player_past()
 {
     //maps\_load::set_player_viewhand_model( "viewhands_player_tf141" ); //here
-    //level.player setviewmodel( "viewhands_shadow_co" ); //here
+    //level.player setviewmodel( "viewhands_tf141" ); //here
     common_scripts\utility::flag_wait( "past_gaz" );
     common_scripts\utility::flag_wait( "gaz_intro_done" );
     common_scripts\utility::flag_wait( "rifle_picked_up" );

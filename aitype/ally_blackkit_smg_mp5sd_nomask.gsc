@@ -22,11 +22,11 @@ main()
     }
 
     self.weapon = "mp5_silencer";
-    if( level.script == "airplane" ){
-        character\character_tf141_rnd::main();
+    if ( level.script == "killhouse" || level.script == "cargoship"){
+        character\character_sas_ct_rnd::main();
     }
     else{
-        character\character_sas_ct_rnd::main();
+        character\character_tf141_rnd::main();
     }
     
 }

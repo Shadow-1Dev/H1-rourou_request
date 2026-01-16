@@ -173,7 +173,7 @@ main()
 
     maps\sniperescape_anim::main();
     level thread maps\sniperescape_amb::main();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     var_2 = getentarray( "curtain_left", "targetname" );
     common_scripts\utility::array_thread( var_2, maps\sniperescape_code::curtain, "curtain_left" );
     var_3 = getentarray( "curtain_right", "targetname" );

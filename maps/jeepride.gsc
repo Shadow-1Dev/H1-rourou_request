@@ -1886,7 +1886,7 @@ bridge_zakhaev()
     level.player switchtoweapon( "colt45_zak_killer" );
     level.player enableweapons();
     level.player allowmelee( 0 );
-    level.player setviewmodel( "viewhands_shadow_co" ); //here
+    level.player setviewmodel( "viewhands_tf141" ); //here
     setsaveddvar( "hud_drawhud", "1" );
     var_8 detach( "weapon_colt1911_black", "tag_weapon_right" );
     level.attack_helidummy hide();

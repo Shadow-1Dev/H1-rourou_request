@@ -380,7 +380,7 @@ main()
     thread maps\killhouse_code::mac_think();
     thread maps\killhouse_code::newcastle_think();
     thread maps\killhouse_code::price_think();
-    thread // monitor_price_name(); // HERE // Shadow Company // here
+    // thread // monitor_price_name(); // HERE // Shadow Company // here
     thread music_control();
     thread maps\killhouse_aud::aud_jet_passby();
     thread maps\killhouse_aud::aud_hangar_amb_ext();
@@ -418,7 +418,7 @@ main()
     common_scripts\utility::array_thread( var_26, maps\killhouse_code::fail_on_damage );
     thread maps\killhouse_code::glowing_rope();
     //maps\_load::set_player_viewhand_model( "viewhands_player_tf141" ); //here
-    //level.player setviewmodel( "viewhands_shadow_co" ); //here
+    //level.player setviewmodel( "viewhands_tf141" ); //here
     thread maps\killhouse_code::chair_guy_setup();
     thread maps\killhouse_code::firearmdepot_guy_think();
     thread maps\killhouse_code::inventory_guy_setup();
@@ -452,7 +452,7 @@ main()
     precachemodel( "head_sas_ct_assault_charles_" );
     precachemodel( "head_sas_ct_assault_mitchel_" );
     precachemodel( "head_sas_ct_assault_william_" );
-    precachemodel( "head_sas_ct_assault_charles__nomask" );
+    precachemodel( "head_sas_ct_assault_charles_nomask_" );
 }
 
 gazintrolightstaging()
@@ -2731,7 +2731,8 @@ report_to_price()
     var_1.animname = "sas1";
     var_2.animname = "sas2";
     var_3.animname = "sas3";
-    // var_1 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_mitchel_" );
+    // var_1 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_mitchel" );
+    // var_1 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_mitchel_" ); // Shadow Company
     level.mocaporiginhangar3 = getent( "mocapRevealPos", "targetname" );
     level.mocaporiginhangar3 thread maps\_anim::anim_loop_solo( level.price, "h1_price_before_reveal_idle", undefined, "stop_before_reveal" );
     level.mocaporiginhangar3 thread maps\_anim::anim_loop_solo( var_1, "h1_sas1_before_reveal_idle", undefined, "stop_before_reveal" );
@@ -4278,7 +4279,7 @@ sittingtalkingguy_think( var_0 )
     var_2 setgoalnode( var_3 );
     var_5 = getent( "SittingGuyPos", "targetname" );
     var_6 = var_0;
-    // var_6 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_charles__nomask" );
+    // var_6 maps\killhouse_code::specify_head_model( "head_sas_ct_assault_charles_nomask" );
     var_6 maps\_utility::gun_remove();
     var_6.grenadeawareness = 0;
     var_6.animname = "generic";
