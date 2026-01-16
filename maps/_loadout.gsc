@@ -95,6 +95,4 @@ give_loadout()
     precachemodel( "viewhands_player_delta_" );
     precachemodel( "viewhands_delta_" );
 
-    precachemodel( "worldbody_h1_usmc_desert" );
-
 }

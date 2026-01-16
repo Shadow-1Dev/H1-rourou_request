@@ -87,6 +87,7 @@ main()
     thread common_scripts\_pipes::main();
     thread maps\_leak::main();
     maps\airplane_precache::main();
+    character\character_hero_ghost::precache();
     maps\_load::main();
     level thread maps\airplane_amb::main();
     maps\airplane_lighting::main();
@@ -171,25 +172,48 @@ start_default()
     var_0 hide();
 }
 
+// start_breach()
+// {
+//     initfriendlies( "breach" );
+//     aa_breach_init();
+// }
 start_breach()
 {
     initfriendlies( "breach" );
+    thread spawn_hero_ghost();
     aa_breach_init();
 }
 
+
+// start_vip()
+// {
+//     initfriendlies( "vip" );
+//     aa_vip_init();
+// }
 start_vip()
 {
     initfriendlies( "vip" );
+    thread spawn_hero_ghost();
     aa_vip_init();
 }
 
+
+// start_freefall()
+// {
+//     initfriendlies( "freefall" );
+//     thread door_open_double( getentarray( "door_bar", "targetname" ) );
+//     common_scripts\utility::flag_set( "human_shield_over" );
+//     aa_freefall_init();
+// }
 start_freefall()
 {
     initfriendlies( "freefall" );
+    thread spawn_hero_ghost();
     thread door_open_double( getentarray( "door_bar", "targetname" ) );
     common_scripts\utility::flag_set( "human_shield_over" );
     aa_freefall_init();
 }
+
 
 start_demo()
 {
@@ -200,6 +224,13 @@ start_demo()
 aa_intro_init()
 {
     initfriendlies( "intro" );
+    thread spawn_hero_ghost();
+    
+    // Set player viewmodel and monitor for changes
+    maps\_load::set_player_viewhand_model( "viewhands_player_tf141" );
+    level.player setviewmodel( "viewhands_tf141" );
+    thread monitor_player_viewhands();
+    
     thread music();
     thread intro_setup();
     thread stealth_intro();
@@ -211,6 +242,26 @@ aa_intro_init()
     level thread aa_vip_init();
     soundscripts\_snd::snd_message( "aud_start_intro_checkpoint" );
     common_scripts\utility::flag_set( "aa_first_floor_section" );
+}
+
+monitor_player_viewhands()
+{
+    level.player endon( "death" );
+    
+    for(;;)
+    {
+        // level.player waittill( "weapon_change" );
+        wait 0.05;
+        // Reapply both viewhand models
+        maps\_load::set_player_viewhand_model( "viewhands_player_tf141" );
+        level.player setviewmodel( "viewhands_tf141" );
+        
+        // Enforce viewbody and player_rig
+        level.scr_model["view_body"] = "viewbody_tf141_forest";
+        level.scr_model["player_rig"] = "viewbody_tf141_forest";
+        level.scr_model["player_viewbody"] = "viewbody_tf141_forest"; //here
+        level.scr_model["worldbody"] = "viewbody_tf141_forest";
+    }
 }
 
 intro_fade_in()
@@ -2564,5 +2615,46 @@ airplane_wibble_setup()
             maps\_wibble::set_cloth_wibble( 0.0 );
 
         wait 0.1;
+    }
+}
+
+spawn_hero_ghost()
+{
+    // Wait for friendlies to be initialized
+    while ( !isdefined( level.macey ) )
+        wait 0.05;
+
+    var_0 = level.macey;
+    var_0.name = "Ghost";
+
+    if ( isdefined( var_0 ) )
+    {
+        // 1. Cleanup existing model
+        var_0 detachall();
+
+        // 2. Apply Hero Ghost Character
+        var_0 [[character\character_hero_ghost::main]]();
+        
+        // 3. Hero / God Mode
+        if ( !isdefined( var_0.magic_bullet_shield ) )
+            var_0 maps\_utility::magic_bullet_shield();
+
+        // 4. Force Weapon (Using airplane mission loadout)
+        var_0.weapon = "mp5_silencer"; // Set the internal field
+        var_0 maps\_utility::gun_remove(); // Clear old
+        var_0 giveweapon( "mp5_silencer" );
+        var_0 givemaxammo( "mp5_silencer" );
+        var_0 switchtoweapon( "mp5_silencer" );
+        
+        // Optional attributes from aitype logic
+        var_0.accuracy = 0.2;
+        var_0.grenadeweapon = "fraggrenade";
+        var_0.grenadeammo = 0;
+        var_0.secondaryweapon = "usp_silencer";
+        var_0.sidearm = "usp_silencer";
+        
+        // Re-enforce friendly team
+        var_0.team = "allies";
+        var_0 setthreatbiasgroup( "allies" );
     }
 }

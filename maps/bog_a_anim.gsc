@@ -5,6 +5,10 @@
 
 main()
 {
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     level.scr_model["tank_draw"] = "vehicle_m1a1_abrams_drawing";
     precachemodel( maps\_utility::getmodel( "tank_draw" ) );
     level.scr_anim["paulsen"]["melee"] = %bog_melee_r_defend;

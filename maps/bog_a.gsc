@@ -20,6 +20,10 @@ dead_script()
 
 main()
 {
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     if ( getdvar( "r_reflectionProbeGenerate" ) == "1" )
     {
         if ( !common_scripts\utility::flag_exist( "_cloaked_stealth_enabled" ) )

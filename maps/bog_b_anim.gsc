@@ -5,6 +5,10 @@
 
 main()
 {
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     animated_model_setup();
     setup_exploder_anims();
     exploder_script_model_anims();

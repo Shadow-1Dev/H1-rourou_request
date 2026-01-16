@@ -5,6 +5,10 @@
 
 main()
 {
+    maps\_load::set_player_viewhand_model( "viewhands_player_delta_" ); //here
+    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["view_body"] = "vb_generic_s1_"; //here
+    level.scr_model["player_rig"] = "vb_generic_s1_"; //here
     if ( getdvarint( "use_old_tank_dialogue" ) == 1 )
     {
         level.scr_anim["price"]["tank_talk"] = %bog_a_tank_dialogue;
