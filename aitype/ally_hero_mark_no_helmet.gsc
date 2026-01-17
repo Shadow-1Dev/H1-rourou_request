@@ -23,10 +23,10 @@ main()
 
     self.weapon = "saw";
     if( level.script == "icbm" || level.script == "launchfacility_a" || level.script == "launchfacility_b" || level.script == "jeepride" ){
-        character\character_tf141_rnd::main();
+        character\character_tf141_griggs::main();
     }
     else{
-        character\character_tf141_griggs::main();
+        character\character_tf141_rnd::main();
     }
     
 }
