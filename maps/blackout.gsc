@@ -24,6 +24,7 @@ main()
 
     level.next_tango_timer = 0;
     maps\createart\blackout_art::main();
+    character\character_tf141_gaz::precache();
     precachemodel( "weapon_mp5" );
     precachemodel( "weapon_saw_MG_setup" );
     precachemodel( "weapon_rpd_MG_setup" );
@@ -317,6 +318,10 @@ start_normal()
     common_scripts\utility::flag_set( "start_swamp_fog" );
     thread maps\blackout_code::aa_town_init();
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     // thread // monitor_price_name(); // HERE // Shadow Company // here
     maps\blackout_code::setup_player();
     walking_the_stream();
@@ -455,6 +460,10 @@ start_field()
     thread maps\blackout_code::aa_town_init();
     thread field_meeting();
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     maps\blackout_code::setup_player();
     var_0 = getaiarray( "axis" );
     common_scripts\utility::array_levelthread( var_0, maps\_utility::deleteent );
@@ -626,6 +635,10 @@ start_overlook()
     common_scripts\utility::flag_set( "ready_to_commence_attack" );
     thread overlook_mortars();
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     var_0 = getent( "russian_leader", "targetname" );
     var_0 thread maps\_utility::add_spawn_function( maps\blackout_code::russian_leader_think );
     var_0 thread maps\_utility::add_spawn_function( maps\blackout_code::sas_main_think );
@@ -815,6 +828,10 @@ start_cliff()
     var_0 thread maps\_utility::spawn_ai();
     var_1 = getaiarray( "allies" );
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     maps\blackout_code::setup_player();
     var_2 = getaiarray( "axis" );
     common_scripts\utility::array_levelthread( var_2, maps\_utility::deleteent );
@@ -935,6 +952,10 @@ start_farmhouse()
     common_scripts\utility::flag_set( "bm21s_attack" );
     var_0 = getaiarray( "allies" );
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     maps\blackout_code::setup_player();
     var_1 = getaiarray( "axis" );
     common_scripts\utility::array_levelthread( var_1, maps\_utility::deleteent );
@@ -989,6 +1010,10 @@ start_blackout()
     common_scripts\utility::flag_set( "go_through_burning_house" );
     thread maps\_wibble::setup_wibble_helis( 1, "blackhawk_spawn_start" );
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     maps\blackout_code::setup_player();
     var_0 = getaiarray( "axis" );
     common_scripts\utility::array_levelthread( var_0, maps\_utility::deleteent );
@@ -1104,6 +1129,10 @@ start_rescue()
     common_scripts\utility::flag_set( "go_through_burning_house" );
     common_scripts\utility::flag_set( "gaz_opens_door" );
     maps\blackout_code::setup_sas_buddies();
+    level.gaz character\character_tf141_gaz::main();
+    level.gaz attach("head_sas_woodland_gaz_", "", 1);
+    // level.price attach("head_hero_price_desert_", "", 1);
+    character\character_tf141_gaz::precache();
     maps\blackout_code::setup_player();
     var_0 = getaiarray( "axis" );
     common_scripts\utility::array_levelthread( var_0, maps\_utility::deleteent );

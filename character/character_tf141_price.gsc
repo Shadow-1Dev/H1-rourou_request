@@ -2,12 +2,25 @@
 main()
 {
 	self setModel("body_forest_tf141_assault_a");
-	self attach("head_sas_woodland_price_", "", true);
+	if( level.script == "blackout" ){
+		self attach("head_sas_woodland_price_nvg", "", true);
+	}
+	else{
+		self attach("head_hero_price_desert_", "", true);
+	}
+	
 	self.voice = "british";
 }
 
 precache()
 {
 	precacheModel("body_forest_tf141_assault_a");
-	precacheModel("head_sas_woodland_price_");
+	if( level.script == "blackout" ){
+		self attach("head_sas_woodland_price_nvg", "", true);
+	}
+	else{
+		precacheModel("head_hero_price_desert_");
+	}
+	
+	
 }

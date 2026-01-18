@@ -95,4 +95,8 @@ give_loadout()
     precachemodel( "viewhands_player_delta_" );
     precachemodel( "viewhands_delta_" );
 
+    precachemodel("body_forest_tf141_assault_a");
+	precachemodel("head_sas_woodland_gaz_");
+	precachemodel("head_sas_woodland_gaz");
+
 }
