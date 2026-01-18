@@ -238,7 +238,7 @@ anim_view_body()
     precachemodel( "viewhands_player_tf141" ); // HERE
     
     level.scr_animtree["view_body"] = #animtree;
-    level.scr_model["view_body"] = "viewbody_tf141_forest"; // HERE
+    level.scr_model["view_body"] = "vb_generic_s1"; // HERE // Fixed...
     level.scr_anim["view_body"]["training_rope"] = %h1_killhouse_player_fastrope;
     level.scr_animtree["view_body_door"] = #animtree;
     level.scr_model["view_body_door"] = "viewbody_tf141_forest";

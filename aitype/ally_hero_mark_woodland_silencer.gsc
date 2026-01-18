@@ -38,8 +38,8 @@ spawner()
 
 precache()
 {
-    // character\character_tf141_rnd::precache();
-    // character\character_tf141_griggs::precache();
+    character\character_tf141_rnd::precache();
+    character\character_tf141_griggs::precache();
     precacheitem( "m4_silencer" );
     precacheitem( "beretta" );
     precacheitem( "usp_silencer" );
