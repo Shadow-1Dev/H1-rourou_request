@@ -4670,6 +4670,7 @@ misc_precacheinit()
     precacheitem( "rpg" );
     precacheitem( "rpg_straight" );
     precacheitem( "facemask" );
+    precacheitem( "m14_scoped_silencer" );
     precacheturret( "heli_spotlight" );
     precacheturret( "heli_minigun_noai" );
     precachemodel( "vehicle_blackhawk_hero_sas_night" );

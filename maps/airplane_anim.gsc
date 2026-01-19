@@ -172,11 +172,11 @@ player_view()
 {
     maps\_load::set_player_viewhand_model( "viewhands_player_tf141" ); //here
     level.scr_animtree["player_view"] = #animtree;
-    level.scr_model["player_view"] = "viewhands_player_tf141";
-    level.scr_model["player_viewhands"] = "viewhands_player_tf141"; //here
+    level.scr_model["player_view"] = "viewhands_player_usmc";
+    // level.scr_model["player_viewhands"] = "viewhands_player_tf141"; //here
     level.scr_animtree["worldbody"] = #animtree;
-    level.scr_model["view_body"] = "viewbody_tf141_forest"; //here
-    level.scr_model["player_rig"] = "viewbody_tf141_forest"; //here
+    // level.scr_model["view_body"] = "viewbody_tf141_forest"; //here
+    // level.scr_model["player_rig"] = "viewbody_tf141_forest"; //here
     level.scr_model["worldbody"] = "viewbody_tf141_forest";
     level.scr_anim["worldbody"]["airplane_end_player"] = %h1_airplane_tandem_jump_full;
 }
