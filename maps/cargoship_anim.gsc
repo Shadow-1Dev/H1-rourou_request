@@ -318,21 +318,27 @@ anim_gen_human()
 
 anim_player()
 {
-    maps\_load::set_player_viewhand_model( "viewhands_player_shadow_co" ); //here
+    precachemodel( "worldhands_h1_sas_ct" );
+    // maps\_load::set_player_viewhand_model( "viewhands_player_shadow_co" ); //here
+    maps\_load::set_player_viewhand_model( "worldhands_h1_sas_ct" ); //here
     level.scr_animtree["end_hands"] = #animtree;
-    level.scr_model["end_hands"] = "viewhands_player_shadow_co"; //here
+    // level.scr_model["end_hands"] = "viewhands_player_shadow_co"; //here
+    level.scr_model["end_hands"] = "worldhands_h1_sas_ct"; //here
     level.scr_anim["end_hands"]["player_rescue"] = %cargoship_ch46_rescue_load_player;
     //precachemodel( "worldbody_h1_sas_ct" );
+    precachemodel( "worldbody_h1_sas_ct" );
     precacheitem( "mp5_silencer" );
     precacheitem( "m4_silencer" );
     level.scr_animtree["fastrope_intro"] = #animtree;
-    level.scr_model["fastrope_intro"] = "viewbody_tf141_forest"; //here
+    // level.scr_model["fastrope_intro"] = "viewbody_tf141_forest"; //here
+    level.scr_model["fastrope_intro"] = "worldbody_h1_sas_ct"; //here
     level.scr_anim["fastrope_intro"]["opening"] = %h1_cargoship_opening_player;
     level.scr_anim["fastrope_intro"]["loop"][0] = %h1_cargoship_opening_player;
     // level.scr_gun["fastrope_intro"] = "viewmodel_m4_silencer";
-    level.scr_gun["fastrope_intro"] = "mp5_silencer";
+    level.scr_gun["fastrope_intro"] = "viewmodel_mp5_silencer";
     level.scr_animtree["player_viewbody"] = #animtree;
-    level.scr_model["player_viewbody"] = "viewbody_tf141_forest"; //here
+    // level.scr_model["player_viewbody"] = "viewbody_tf141_forest"; //here
+    level.scr_model["player_viewbody"] = "worldbody_h1_sas_ct"; //here
     level.scr_anim["player_viewbody"]["player_explosion"] = %cargoship_explosion_player;
     level.scr_anim["player_viewbody"]["player_explosion_start"] = %h1_cargoship_explosion_reaction_player;
     maps\_anim::addnotetrack_flag( "player_viewbody", "fade_in", "shellshock_blinking", "player_explosion" );

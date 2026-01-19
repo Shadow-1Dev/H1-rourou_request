@@ -22,7 +22,7 @@ give_loadout()
     maps\_loadout_code::persist( "launchfacility_a", "icbm" );
     maps\_loadout_code::persist( "launchfacility_b", "launchfacility_a" );
     maps\_loadout_code::loadout( "killhouse", undefined, undefined, "fraggrenade", "flash_grenade", "viewhands_tf141", "british" );
-    maps\_loadout_code::loadout( "cargoship", "mp5_silencer", "m4_silencer", "fraggrenade", "flash_grenade", "viewhands_tf141", "british" ); //here
+    maps\_loadout_code::loadout( "cargoship", "mp5_silencer", "usp_silencer", "fraggrenade", "flash_grenade", "viewhands_black_kit", "british" ); //here
     maps\_loadout_code::loadout( "coup", undefined, undefined, undefined, undefined, undefined, "american" );
     maps\_loadout_code::loadout( "blackout", "m4m203_silencer_reflex", "mp5", "fraggrenade", "flash_grenade", "viewhands_tf141", "american" );
     maps\_loadout_code::loadout( "armada", "m4_grunt", "beretta", "fraggrenade", "flash_grenade", "viewhands_delta_", "american" );
