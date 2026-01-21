@@ -22,7 +22,7 @@ main()
     }
 
     self.weapon = "m4_silencer";
-    if( level.script == "icbm" || level.script == "launchfacility_a" || level.script == "launchfacility_b" || level.script == "jeepride" ){
+    if( level.script == "icbm" || level.script == "launchfacility_a" || level.script == "launchfacility_b" || level.script == "jeepride" || level.script == "village_defend" || level.script == "ambush" ){
         character\character_tf141_griggs::main();
     }
     else{

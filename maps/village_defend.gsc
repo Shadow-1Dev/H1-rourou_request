@@ -7,6 +7,7 @@ main()
         return;
 
     precachemodel( "projectile_cbu97_clusterbomb" );
+    character\character_tf141_price::precache();
     precachemodel( "tag_origin" );
     precachemodel( "weapon_javelin_obj" );
     precachemodel( "vehicle_av8b_harrier_jet" );
@@ -15,6 +16,7 @@ main()
     precachemodel( "vehicle_ch46e_wires" );
     precachemodel( "vehicle_ch46e_opened_door_interior_a" );
     precacheitem( "javelin" );
+    precachemodel( "head_hero_price_desert_" );
     precacheitem( "airstrike_support" );
     precacheitem( "flash_grenade" );
     precacheshader( "popmenu_bg" );
@@ -114,6 +116,9 @@ main()
     level.price = getent( "price", "targetname" );
     level.price maps\_utility::make_hero();
     level.price.animname = "price";
+    level.price.name = "priceeee";
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     level.gaz = getent( "redshirt2", "targetname" );
     level.gaz maps\_utility::make_hero();
     level.gaz.animname = "gaz";
@@ -354,6 +359,8 @@ start_village_defend()
     thread intro();
     level.start_intro = 1;
     level.player setthreatbiasgroup( "player" );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     setignoremegroup( "axis", "allies" );
     setignoremegroup( "allies", "axis" );
     setignoremegroup( "player", "axis" );
@@ -363,6 +370,8 @@ start_southern_hill()
 {
     soundscripts\_snd::snd_message( "aud_start_southern_hill_checkpoint" );
     level.player setthreatbiasgroup( "player" );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     setignoremegroup( "axis", "allies" );
     setignoremegroup( "allies", "axis" );
     setignoremegroup( "player", "axis" );
@@ -375,6 +384,8 @@ start_southern_hill()
     var_1 = getnode( "price_southern_start", "targetname" );
     level.price = getent( "price", "targetname" );
     level.price teleport( var_1.origin );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     var_2 = getentarray( "introHillTrig", "targetname" );
 
     for ( var_3 = 0; var_3 < var_2.size; var_3++ )
@@ -396,6 +407,8 @@ start_minigun_fallback()
     level.player setorigin( var_0.origin );
     var_1 = getnode( "price_southern_start", "targetname" );
     level.price = getent( "price", "targetname" );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     level.price teleport( var_1.origin );
     thread moveredshirts( "redshirt_southern_start1", "redshirt_southern_start2" );
     var_2 = getentarray( "introHillTrig", "targetname" );
@@ -424,6 +437,8 @@ start_minigun()
     level.price = getent( "price", "targetname" );
     level.price teleport( var_1.origin );
     level.price setgoalnode( var_1 );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     thread moveredshirts( "fallback_redshirt1", "fallback_redshirt2" );
     thread southern_hill_mortars_killtimer();
     thread minigun_primary_attack();
@@ -450,6 +465,8 @@ start_helidrop()
     level.price = getent( "price", "targetname" );
     level.price teleport( var_1.origin );
     level.price setgoalnode( var_1 );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     thread moveredshirts( "fallback_redshirt1", "fallback_redshirt2" );
     thread southern_hill_mortars_killtimer();
     thread minigun_primary_attack();
@@ -646,12 +663,15 @@ intro()
     var_5 thread followscriptedpath( var_7, 0.75, "prone" );
     wait 1;
     level.price maps\_anim::anim_single_queue( level.price, "spreadout" );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     common_scripts\utility::flag_set( "objective_price_orders_southern_hill" );
     thread intro_ridgeline_check( level.player, "player_southern_start" );
     thread intro_ridgeline_check( level.price, "price_southern_start" );
     thread intro_hillpatrol_check();
     maps\_utility::radio_dialogue_queue( "justsaywhen" );
     thread southern_hill_defense();
+    
 }
 
 intro_church_tower_explode()
@@ -704,6 +724,7 @@ intro_ridgeline_check( var_0, var_1 )
 
 intro_loudspeaker()
 {
+    iprintln("dddddddddd");
     var_0 = [];
     var_0[0] = "villagedef_rul_surrenderatonce";
     var_0[1] = "villagedef_rul_dropyourweapons";
@@ -1032,6 +1053,8 @@ southern_hill_ambush()
     common_scripts\utility::flag_wait( "southern_hill_killzone_detonate" );
     wait 2;
     level.price thread maps\_anim::anim_single_queue( level.price, "openfire" );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     wait 1;
     maps\_utility::battlechatter_on( "allies" );
 }
@@ -1426,6 +1449,8 @@ minigun_fallback()
     maps\_utility::radio_dialogue_queue( "easternroadlocked" );
     level.price.baseaccuracy = 1;
     level.price.ignoresuppression = 1;
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     var_0.baseaccuracy = 1;
     var_0.ignoresuppression = 1;
     var_1.baseaccuracy = 1;
@@ -1755,6 +1780,8 @@ helidrop()
     var_1 = getnode( "clacker_fallback_price", "targetname" );
     level.price setgoalnode( var_1 );
     level.price thread hero_scripted_travel();
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     var_2 = getent( "redshirt1", "targetname" );
     var_3 = getnode( "clacker_fallback_redshirt1", "targetname" );
     var_2 setgoalnode( var_3 );
@@ -2573,6 +2600,8 @@ field_fallback()
     var_1 setgoalnode( var_3 );
     wait 2;
     level.price setgoalnode( var_4 );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     wait 5;
     level.sasgunner setgoalnode( var_5 );
 }
@@ -2591,6 +2620,8 @@ barn_fallback()
     var_2 setgoalnode( var_3 );
     wait 2;
     level.price setgoalnode( var_4 );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     wait 3;
     level.sasgunner setgoalnode( var_5 );
 }
@@ -2609,6 +2640,8 @@ escape_fallback()
     common_scripts\utility::flag_set( "lz_reached" );
     var_3 setgoalnode( var_4 );
     level.price setgoalnode( var_5 );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     level.sasgunner setgoalnode( var_6 );
     var_1 setgoalnode( var_2 );
 }
@@ -2821,6 +2854,8 @@ objectives()
     maps\_utility::autosave_by_name( "get_to_the_choppah" );
     maps\_utility::arcademode_checkpoint( 7, "g" );
     var_6 = length( level.price.origin - level.player.origin );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     var_7 = getent( "price_seaknight_doppel", "targetname" );
     var_8 = length( level.gaz.origin - level.player.origin );
     var_9 = getent( "gaz_seaknight_doppel", "targetname" );
@@ -2833,6 +2868,8 @@ objectives()
     var_14[1] = level.gaz;
     var_14[2] = level.redshirt;
     var_14[3] = level.sasgunner;
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
 
     for ( var_4 = 0; var_4 < var_14.size; var_4++ )
         var_14[var_4] thread friendly_player_tracking_nav();
@@ -3164,6 +3201,8 @@ rescue_teleport_friendlies()
 {
     wait 2;
     var_0 = length( level.price.origin - level.player.origin );
+    level.price character\character_tf141_price::main();
+    level.price attach("head_hero_price_desert_", "", 1);
     var_1 = getent( "price_seaknight_doppel", "targetname" );
     var_2 = length( level.gaz.origin - level.player.origin );
     var_3 = getent( "gaz_seaknight_doppel", "targetname" );

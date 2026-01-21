@@ -278,10 +278,11 @@ player_anims()
     level.scr_model["player_viewhands"] = "viewhands_player_tf141"; //here
     level.scr_model["playerview"] = "viewbody_tf141_forest"; //here
     level.scr_model["player_body"] = "viewbody_tf141_forest"; //here
-    level.scr_model["player_rig"] = "viewbody_tf141_forest"; //here
+    level.scr_model["player_rig"] = "viewhands_player_tf141"; //here
     level.scr_model["view_body"] = "viewbody_tf141_forest";
     level.scr_animtree["player_rescue_griggs_model"] = #animtree;
     // level.scr_model["player_rescue_griggs_model"] = "viewhands_player_tf141"; //here
+    
     level.scr_model["player_rescue_griggs_model"] = "viewbody_tf141_forest"; //here
     level.scr_anim["player_rescue_griggs_model"]["grigsby_rescue_player"] = %h1_grigsby_rescue_player;
     maps\_anim::addnotetrack_animsound( "player_rescue_griggs_model", "grigsby_rescue_player", "start", "scn_icbm_rescue_griggs_cut" );

@@ -207,12 +207,12 @@ player_anims()
     maps\_anim::addnotetrack_animsound( "player_carry", "carry_run", "drag_step_right", "airlift_plr_footstep_dragR" );
     maps\_anim::addnotetrack_animsound( "player_carry", "carry_run", "drag_step_left", "airlift_plr_footstep_dragL" );
     level.scr_animtree["player_carry"] = #animtree;
-    level.scr_model["player_carry"] = "viewhands_player_delta_"; //here
+    level.scr_model["player_carry"] = "viewhands_player_usmc"; //here
     level.scr_animtree["player_viewbody"] = #animtree;
     level.scr_model["player_viewbody"] = "vb_generic_s1_"; //here
     level.scr_anim["player_viewbody"]["player_nuke_crash"] = %h1_airlift_crash_player;
     level.scr_animtree["player_viewhands"] = #animtree;
-    level.scr_model["player_viewhands"] = "viewhands_player_delta_"; //here
+    level.scr_model["player_viewhands"] = "viewhands_player_usmc"; //here
     level.scr_anim["player_viewhands"]["turret_intro_anim"] = %h1_airlift_intro_player;
     level.scr_anim["player_viewhands"]["turret_idle_anim"] = [ %h1_ch46_turret_player_idle ];
     level.scr_anim["player_viewhands"]["turret_fire_anim"] = %h1_ch46_turret_player_fire;

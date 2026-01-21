@@ -97,7 +97,7 @@ main()
     setup_bm21_deathanim();
     maps\icbm_fx::main();
     maps\createfx\icbm_audio::main();
-    maps\_load::set_player_viewhand_model( "viewhands_tf141" ); //here
+    maps\_load::set_player_viewhand_model( "viewhands_player_tf141" ); //here
     animscripts\dog\dog_init::initdoganimations();
     level.weaponclipmodels = [];
     level.weaponclipmodels[0] = "weapon_ak47_clip";

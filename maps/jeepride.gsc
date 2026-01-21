@@ -1748,7 +1748,7 @@ bridge_zakhaev()
 
     // if ( isdefined( level.price.headmodel ) )
     //     var_8 attach( level.price.headmodel, "", 1 );
-    var_8 character\character_sas_ct_rnd::main(); //here
+    var_8 character\character_tf141_price::main(); //here
 
     level.price delete();
     level.pricedummy = var_8;

@@ -16,11 +16,9 @@ precache()
 {
 	precacheModel("body_forest_tf141_assault_a");
 	if( level.script == "blackout" ){
-		self attach("head_sas_woodland_price_nvg", "", true);
+		precacheModel("head_sas_woodland_price_nvg");
 	}
 	else{
 		precacheModel("head_hero_price_desert_");
 	}
-	
-	
 }

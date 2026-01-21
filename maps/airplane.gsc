@@ -87,7 +87,7 @@ main()
     thread common_scripts\_pipes::main();
     thread maps\_leak::main();
     maps\airplane_precache::main();
-    character\character_hero_ghost::precache();
+    character\character_tf141_ghost::precache();
     maps\_load::main();
     level thread maps\airplane_amb::main();
     maps\airplane_lighting::main();
@@ -2633,7 +2633,7 @@ spawn_hero_ghost()
         var_0 detachall();
 
         // 2. Apply Hero Ghost Character
-        var_0 [[character\character_hero_ghost::main]]();
+        var_0 [[character\character_tf141_ghost::main]]();
         
         // 3. Hero / God Mode
         if ( !isdefined( var_0.magic_bullet_shield ) )
