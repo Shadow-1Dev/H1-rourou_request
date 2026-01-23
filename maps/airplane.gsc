@@ -2621,10 +2621,12 @@ airplane_wibble_setup()
 spawn_hero_ghost()
 {
     // Wait for friendlies to be initialized
-    while ( !isdefined( level.macey ) )
+    // while ( !isdefined( level.macey ) )
+    while ( !isdefined( level.price ) )
         wait 0.05;
 
-    var_0 = level.macey;
+    // var_0 = level.macey;
+    var_0 = level.price;
     var_0.name = "Ghost";
 
     if ( isdefined( var_0 ) )
