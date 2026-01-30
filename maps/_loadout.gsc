@@ -99,4 +99,10 @@ give_loadout()
 	precachemodel("head_sas_woodland_gaz_");
 	precachemodel("head_sas_woodland_gaz");
 
+	precachemodel("head_sas_woodland_price_");
+	precachemodel("head_sas_woodland_price");
+    character\character_tf141_price::precache();
+	// precachemodel("head_hero_price_desert_");
+	// precachemodel("head_hero_price_desert");
+
 }
